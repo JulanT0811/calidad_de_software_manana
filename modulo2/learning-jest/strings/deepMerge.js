@@ -31,7 +31,8 @@ function normalizarAlumno(alumnos){
     if (typeof nombre !== 'string' || !Array.isArray(notas)) {
         throw new TypeError(
             'alumno.nombre debe ser string y' +
-            'alumno.nota debe ser aray')
+            ' alumno.notas debe ser un arreglo'
+        );
     }
     const valid= notas.every(n=>typeof n === 'number'&& !Number.isNaN(m));
     if(!valid) 
