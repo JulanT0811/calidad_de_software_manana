@@ -11,5 +11,6 @@ describe('contarPares', () => {
     
     test('Sad path: numero no entero', () => {
         expect(() => contarPares('no array')).toThrow('arreglo inválido');
-    });
+    });
 });
+

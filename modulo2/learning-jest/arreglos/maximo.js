@@ -1,12 +1,13 @@
-function maximo(arreglo){
-    if(!Array.isArray(arreglo) || arreglo.length== 0)
-        throw new Error('arreglo invalido');
-    mayor=0;
-    for(let i=0;i<arreglo.length;i++){
-        if (arreglo[i]>mayor){
-            mayor=arreglo[i];
+function maximo(arreglo) {
+    if(!Array.isArray(arreglo) || arreglo.length == 0)
+        throw new TypeError("arreglo invalido");
+    
+    mayor = 0;
+    for(let i=0; i < arreglo.length; i ++) {
+        if(arreglo[i] > mayor) {
+            mayor = arreglo[i];
         }
     }
     return mayor;
 }
-module.exports=maximo;
+module.exports = {maximo}; 

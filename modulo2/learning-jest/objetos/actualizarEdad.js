@@ -1,5 +1,5 @@
-function actualizarEdad(persona, nuevaEdad) {
-    if (!persona || typeof persona == 'object') {
+function actualizarEdad(persona, edad) {
+    if (!persona || !typeof persona== 'object') {
         throw new TypeError("persona invalida");
     }
     if (!Number.isInteger(edad) || edad < 0) {
@@ -8,4 +8,5 @@ function actualizarEdad(persona, nuevaEdad) {
     persona.edad = edad;
     return persona;
 }
-module.exports = {actualizarEdad};
+
+module.exports = {actualizarEdad} 

@@ -17,7 +17,7 @@
     "url": "https://github.com/JulanT0811/calidad_de_software_manana/issues"
   },
   "homepage": "https://github.com/JulanT0811/calidad_de_software_manana#readme",
-  "dependencies": {
+  "devDependencies": {
     "jest": "^30.2.0"
   }
 }

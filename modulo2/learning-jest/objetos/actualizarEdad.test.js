@@ -1,21 +1,17 @@
-const {actualixarEdad} = require('./actualizarEdad');
+const {actualizarEdad} = require('./actualizarEdad');
 
-describe('actualizarEdad', () => {
-    test('Happy path:30->30', () => {
-        const response = actualixarEdad(
+describe('Actualizar Edad', () => {
+    test('Happy path: 30 -> 30', () => {
+        const Response = actualizarEdad(
             {
-                nombre: 'Pedro',
-                edad: 29,
-            }
-        );
-        expect(response.edad).toBe(60);
+                nombre: 'Juan',
+                edad: 39
+            }, 60
+        )
+        expect(Response.edad).toBe(60);
     });
-    test('Sad path: nombre / edad invalido', 
-        () => {
-            expect(() => actualixarEdad(
-                null, 10
-            )).tothrow('persona invalida');
-            expect(() => actualixarEdad({}, -1))
-            .toThrow('edad invalida'); 
-        });
-});   
+    test('Sad path: persona/ edad invalidos', () => {
+        expect(() => actualizarEdad(null, 10)).toThrow('persona invalida');
+        expect(() => actualizarEdad({}, -1)).toThrow('edad invalida');
+    }); 
+}); 

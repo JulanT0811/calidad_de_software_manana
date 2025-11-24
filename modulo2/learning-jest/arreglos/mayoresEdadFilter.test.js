@@ -1,14 +1,16 @@
 const { mayoresEdadFilter } = require('./mayoresEdadFilter');
 
-describe('mayoresEdadFilter', () => {
-    test('Happy path: [15,18,26,28] mayor de edad [18,26,28]'
-        ,() => {
-            expect(mayoresEdadFilter([15,18,26,28])).toEqual([18,26,28]);
-        });
-    test('Happy path: [] mayor de edad []',() => {
-            expect(mayoresEdadFilter([])).toEqual([]);
-        });
-    test('Sad path: edades invalidas', () => {
-        expect(() => mayoresEdadFilter('areglo')).toThrow('areglo invalido');
+describe('Mayores de Edad con Filter', () => {
+    test('Happy path: [12,18,20,17] => [18,20]', () => {
+        expect(mayoresEdadFilter([12,18,20,17])).toEqual([18,20]);
+    });
+
+    test('Happy path: [] mayores [] ', () => {
+        expect(mayoresEdadFilter([])).toEqual([]);
+    });
+
+
+    test('Sad path: arreglo invalido', () => {
+        expect(() => mayoresEdadFilter('arreglo')).toThrow('arreglo invalido');
     });
 });

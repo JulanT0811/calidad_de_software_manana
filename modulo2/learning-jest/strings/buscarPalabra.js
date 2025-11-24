@@ -1,11 +1,11 @@
-function buscarPalabra (frase, palabra) {
-    if(!frase 
+function buscarPalabra(frase, palabra) {
+    if (!frase 
         || !palabra
-        || typeof frase != 'string'
-        || typeof palabra != 'string'
+        || !typeof frase == 'string'
+        || !typeof palabra == 'string'
     ){
         throw new TypeError("frase invalida");
     }
     return frase.includes(palabra);
-}   
-module.exports = {buscarPalabra}; 
+}
+module.exports = {buscarPalabra}  

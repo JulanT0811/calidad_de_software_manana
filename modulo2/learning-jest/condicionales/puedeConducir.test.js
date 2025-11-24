@@ -1,17 +1,17 @@
-const test = require('node:test');
-const { puedeConducir } = require('./puedeConducir');
+const {puedeConducir} = require('./puedeConducir');
 
-describe('puedesConducir', () => {
-    test('Happy path: 20 puede Conducir', () => {
-        const respuesta = puedeConducir(20);
-        expect(esPar(20)).toBe(Si);
+describe('puedeConducir', () => {
+    test('Happy path: 20 puede conducir',() => {
+        const respuesta =puedeConducir(20)
+        expect(respuesta).toBe('Si');
     });
-    test('Happy path: 16 puede Conducir', () => {
-        const respuesta = puedeConducir(16);
-        expect(esPar(7)).toBe(false);
+    test('Happy path: 16 no puede conducir',() => {
+        const respuesta =puedeConducir(16)
+        expect(respuesta).toBe('No'); 
     });
-    test('Sad path: edad invalida', () => {
-        expect(() => esPar(-1)).toThrow('número debe ser entero');
-         expect(() => esPar('19')).toThrow('número debe ser entero');
+    test('Sad path: edad invalida',() => {
+        expect(() => puedeConducir(-1)).toThrow('edad invalida');
+        expect(() => puedeConducir('19')).toThrow('edad invalida');
     });
 });
+
